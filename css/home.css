@@ -1,0 +1,227 @@
+main .main-box, header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .main-box .explore-ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .main-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header .logo {
+  flex-basis: 10%;
+}
+header nav {
+  width: 55%;
+  position: absolute;
+  right: 0;
+}
+header nav .main-links {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 0 100px;
+}
+header nav .main-links::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -45%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header nav .link-item {
+  position: relative;
+  counter-increment: link-counter;
+  margin-right: 20px;
+}
+header nav .link-item::before {
+  position: absolute;
+  content: "0" counter(link-counter);
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+}
+header nav .link-item.active::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 25px);
+  top: 100%;
+  left: -25px;
+  background-color: #fff;
+  height: 2px;
+}
+header nav .link-item a {
+  display: inline-block;
+  padding: 25px 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+header nav .bars {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header nav {
+    position: relative;
+    text-align: right;
+  }
+  header nav .main-links {
+    position: absolute;
+    flex-direction: column;
+    top: 30px;
+    right: 30px;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  header nav .main-links.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  header nav .main-links::before {
+    display: none;
+  }
+  header nav .main-links .link-item {
+    left: 25px;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  header nav .main-links .link-item.active::after {
+    width: 100%;
+  }
+  header nav .bars {
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  header nav .main-links {
+    padding: 0 40px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-size: cover;
+  padding: 25px 0;
+}
+
+main {
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+  height: 100vh;
+}
+main .main-box {
+  position: relative;
+  top: 150px;
+}
+main .main-box .content-box {
+  flex-basis: 50%;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+main .main-box .content-box .head,
+main .main-box .content-box .text {
+  color: rgba(255, 255, 255, 0.7);
+}
+main .main-box .content-box .head {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+main .main-box .content-box .space {
+  color: #fff;
+  font-size: 100px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin: 20px 0;
+}
+main .main-box .content-box .text {
+  line-height: 1.7;
+  word-break: break-all;
+}
+main .main-box .explore-ball {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main .main-box .explore-ball:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  transform: rotate(2turn);
+}
+main .main-box .explore-ball:hover .explore {
+  color: #fff;
+}
+main .main-box .explore-ball .explore {
+  color: #4e5163;
+  text-transform: uppercase;
+  font-size: 25px;
+  padding: 100%;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  main .main-box {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+  main .main-box .content-box {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  main .main-box .explore-ball {
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 1199px) {
+  main .main-box .content-box {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}/*# sourceMappingURL=home.css.map */
