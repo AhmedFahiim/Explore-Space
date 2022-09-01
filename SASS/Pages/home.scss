@@ -6,6 +6,7 @@
 main {
   background-image: url("../../assets/home/background-home-desktop.jpg");
   height: 100vh;
+  overflow: hidden;
   .main-box {
     @extend %flex-between;
     position: relative;
@@ -38,8 +39,8 @@ main {
       }
     }
     .explore-ball {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       @extend %flex-center;
       background-color: #fff;
       border-radius: 50%;
