@@ -27,7 +27,7 @@ header nav {
 header nav .main-links {
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   padding: 0 100px;
 }
 header nav .main-links::before {
@@ -254,4 +254,4 @@ main {
   .main-box .crew-members .member-info .brief {
     padding: 0;
   }
-}/*# sourceMappingURL=crew.css.map */
+} /*# sourceMappingURL=crew.css.map */

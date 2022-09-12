@@ -259,4 +259,9 @@ main {
   .main-box .planets-info .row {
     align-items: center;
   }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-box .planets-info .distance-time .number {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=destination.css.map */
